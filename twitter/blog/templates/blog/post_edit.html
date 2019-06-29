@@ -1,0 +1,16 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<div class="form">
+	<form method="POST" class="form_input"> {% csrf_token %}
+	    {{ form.as_p }}
+	<button type="submit" class="btn">Send</button>
+</div>
+<div class="content_one">
+	{% for post in posts %}
+	<div class="post">
+		{{ post.content }} 
+	</div>
+	{% endfor %}
+</div>
+{% endblock %}

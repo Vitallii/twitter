@@ -1,0 +1,25 @@
+{% load static %}
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Home</title>
+</head>
+<body>
+<div class="header">
+	<div class="logo">
+	<h1>MVA</h1>
+    </div>
+</div>
+<div class="button">
+    <a href="http://127.0.0.1:8000/admin/blog/post/">История сообщений</a>
+</div>
+<div message_one>
+    {% block content %}
+    {% endblock %}
+</div>    
+<!--<form> 
+    <textarea rows="4" cols="50" name="subject" placeholder="Введите ваше сообщение:" class="message" required></textarea>
+        <button type="submit" class="btn">Save</button>
+</form>-->
+</body>
+</html>
